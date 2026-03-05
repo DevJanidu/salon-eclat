@@ -14,9 +14,9 @@ export default function AboutPage() {
   return (
     <div className="pt-32 pb-24 bg-bg">
       {/* Hero Section */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-16 md:mb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -85,9 +85,9 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-secondary-bg px-6 mb-32">
+      <section className="py-12 md:py-24 bg-secondary-bg px-6 mb-16 md:mb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -113,9 +113,9 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-16 md:mb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-xs font-bold text-salon-gold tracking-[0.3em] uppercase mb-6">
               Our Philosophy
             </h2>
@@ -123,9 +123,9 @@ export default function AboutPage() {
               The Éclat Standards
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="p-10 bg-white rounded-[2.5rem] border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
-              <Sparkles className="w-10 h-10 text-salon-gold mb-8" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+            <div className="p-6 md:p-10 bg-white rounded-3xl border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
+              <Sparkles className="w-10 h-10 text-salon-gold mb-6 md:mb-8" />
               <h4 className="text-2xl font-serif font-bold text-text-secondary mb-4">
                 Premium Products
               </h4>
@@ -134,8 +134,8 @@ export default function AboutPage() {
                 your hair and skin receive the best possible care.
               </p>
             </div>
-            <div className="p-10 bg-white rounded-[2.5rem] border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
-              <Heart className="w-10 h-10 text-salon-gold mb-8" />
+            <div className="p-6 md:p-10 bg-white rounded-3xl border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
+              <Heart className="w-10 h-10 text-salon-gold mb-6 md:mb-8" />
               <h4 className="text-2xl font-serif font-bold text-text-secondary mb-4">
                 Personalized Care
               </h4>
@@ -144,8 +144,8 @@ export default function AboutPage() {
                 individual style, personality, and beauty goals.
               </p>
             </div>
-            <div className="p-10 bg-white rounded-[2.5rem] border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
-              <Star className="w-10 h-10 text-salon-gold mb-8" />
+            <div className="p-6 md:p-10 bg-white rounded-3xl border border-border-color shadow-sm hover:shadow-xl transition-all duration-500">
+              <Star className="w-10 h-10 text-salon-gold mb-6 md:mb-8" />
               <h4 className="text-2xl font-serif font-bold text-text-secondary mb-4">
                 Expert Artistry
               </h4>

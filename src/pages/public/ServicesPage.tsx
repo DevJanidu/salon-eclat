@@ -67,7 +67,7 @@ export default function ServicesPage() {
   }, [apiServices, activeCategory, search]);
 
   return (
-    <div className="pt-32 pb-24 bg-bg">
+    <div className="pt-24 pb-16 bg-bg">
       {/* Header */}
       <section className="px-6 mb-16">
         <div className="max-w-7xl mx-auto text-center">
@@ -268,9 +268,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Custom Package CTA */}
-      <section className="mt-32 px-6">
-        <div className="max-w-5xl mx-auto bg-secondary-bg rounded-[3rem] p-12 md:p-20 text-center border border-border-color">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-text-primary mb-8">
+      <section className="mt-16 md:mt-32 px-6">
+        <div className="max-w-5xl mx-auto bg-secondary-bg rounded-3xl md:rounded-[3rem] p-7 md:p-20 text-center border border-border-color">
+          <h2 className="text-2xl md:text-5xl font-serif font-bold text-text-primary mb-6 md:mb-8">
             Looking for a{" "}
             <span className="text-salon-gold italic">Custom Package</span>?
           </h2>

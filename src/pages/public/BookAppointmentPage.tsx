@@ -1028,7 +1028,8 @@ export default function BookAppointmentPage() {
                   </Button>
                   <Button
                     type="submit"
-                    className="group px-8 shadow-lg shadow-salon-gold/20 tracking-wide"
+                    size="sm"
+                    className="group px-5 shadow-md shadow-salon-gold/20 tracking-wide text-sm"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

@@ -102,8 +102,8 @@ export default function HomePage() {
       </section>
 
       {/* About Preview */}
-      <section className="py-32 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <section className="py-16 md:py-32 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
           <div data-aos="fade-right">
             <h2 className="text-xs font-bold text-salon-gold tracking-[0.3em] uppercase mb-6">
               Our Philosophy
@@ -162,9 +162,9 @@ export default function HomePage() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-32 bg-secondary-bg">
+      <section className="py-16 md:py-32 bg-secondary-bg">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20" data-aos="fade-up">
+          <div className="text-center mb-10 md:mb-20" data-aos="fade-up">
             <h2 className="text-xs font-bold text-salon-gold tracking-[0.3em] uppercase mb-6">
               Our Expertise
             </h2>
@@ -173,7 +173,7 @@ export default function HomePage() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Hair Styling",
@@ -193,7 +193,7 @@ export default function HomePage() {
             ].map((service, i) => (
               <div
                 key={i}
-                className="bg-white p-12 rounded-3xl border border-border-color shadow-sm hover:shadow-2xl transition-all duration-500 group text-center"
+                className="bg-white p-7 md:p-12 rounded-3xl border border-border-color shadow-sm hover:shadow-2xl transition-all duration-500 group text-center"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
               >
@@ -221,8 +221,8 @@ export default function HomePage() {
       </section>
 
       {/* Mini Map & Contact info */}
-      <section className="py-32 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 md:py-32 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <div data-aos="fade-right">
             <h2 className="text-xs font-bold text-salon-gold tracking-[0.3em] uppercase mb-6">
               Visit Us
@@ -276,7 +276,7 @@ export default function HomePage() {
             </a>
           </div>
           <div
-            className="h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-border-color"
+            className="h-64 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-border-color"
             data-aos="fade-left"
           >
             <iframe
@@ -293,14 +293,14 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 bg-black text-white relative overflow-hidden">
+      <section className="py-16 md:py-32 px-6 bg-black text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-7xl font-serif font-bold mb-10"
+            className="text-3xl md:text-7xl font-serif font-bold mb-6 md:mb-10"
           >
             Experience <span className="text-salon-gold italic">Éclat</span>{" "}
             Luxury

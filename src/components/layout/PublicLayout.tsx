@@ -174,8 +174,8 @@ export function PublicLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-20 px-6 border-t border-salon-gold/20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+      <footer className="bg-black text-white py-12 md:py-20 px-6 border-t border-salon-gold/20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-salon-gold rounded-full flex items-center justify-center text-white font-serif text-xl font-bold">
@@ -301,7 +301,7 @@ export function PublicLayout() {
             </a>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 text-center">
+        <div className="max-w-7xl mx-auto mt-10 md:mt-20 pt-8 border-t border-white/5 text-center">
           <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em]">
             © {new Date().getFullYear()} {SALON_DATA.name}. Luxury Hair & Beauty
             Excellence.

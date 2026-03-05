@@ -52,7 +52,7 @@ export default function PortfolioPage() {
   return (
     <div className="pt-32 pb-24 bg-bg">
       {/* Header */}
-      <section className="px-6 mb-20">
+      <section className="px-6 mb-12 md:mb-20">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-16 md:mb-32">
         <div className="max-w-7xl mx-auto">
           {loading ? (
             <div className="flex justify-center py-24">
@@ -144,9 +144,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Before/After Section */}
-      <section className="py-32 bg-secondary-bg px-6">
+      <section className="py-16 md:py-32 bg-secondary-bg px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <h2 className="text-xs font-bold text-salon-gold tracking-[0.3em] uppercase mb-6">
               Transformations
             </h2>
@@ -155,7 +155,7 @@ export default function PortfolioPage() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
             {beforeAfterItems.map((item) => (
               <div key={item.id} className="space-y-8" data-aos="fade-up">
                 <div className="grid grid-cols-2 gap-4">
@@ -197,7 +197,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6">
+      <section className="py-16 md:py-32 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary mb-8">
             Want a <span className="text-salon-gold italic">Similar Glow</span>?

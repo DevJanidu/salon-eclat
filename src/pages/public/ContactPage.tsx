@@ -18,7 +18,7 @@ export default function ContactPage() {
   return (
     <div className="pt-32 pb-24 bg-bg">
       {/* Header */}
-      <section className="px-6 mb-20">
+      <section className="px-6 mb-12 md:mb-20">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-16 md:mb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
             {/* Contact Info */}
             <div className="space-y-12">
               <div data-aos="fade-right">
@@ -125,7 +125,7 @@ export default function ContactPage() {
               </div>
 
               <div
-                className="p-10 bg-secondary-bg rounded-[2.5rem] border border-border-color"
+                className="p-6 md:p-10 bg-secondary-bg rounded-3xl border border-border-color"
                 data-aos="fade-up"
               >
                 <h4 className="text-2xl font-serif font-bold text-text-primary mb-6">
@@ -148,7 +148,7 @@ export default function ContactPage() {
 
             {/* Map Embed */}
             <div
-              className="h-[600px] rounded-[3rem] overflow-hidden border border-border-color shadow-2xl"
+              className="h-72 md:h-[600px] rounded-3xl md:rounded-[3rem] overflow-hidden border border-border-color shadow-2xl"
               data-aos="fade-left"
             >
               <iframe
