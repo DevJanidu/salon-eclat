@@ -1,0 +1,5 @@
+{
+  "name": "Éclat Hair & Beauty Salon",
+  "description": "Premium hair, skin, and makeup services in Matale, Sri Lanka. Experience luxury beauty excellence with Éclat.",
+  "requestFramePermissions": ["geolocation"]
+}

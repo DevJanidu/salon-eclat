@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif:
+    "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+  --color-salon-gold: #d4af37;
+  --color-salon-gold-dark: #b8971f;
+  --color-salon-gold-hover: #f0cb50;
+  --color-salon-champagne: #f6d365;
+  --color-salon-bronze: #c6a85b;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-color: var(--border-color);
+}
+
+/* ── Light mode ── */
+:root {
+  --bg: #f7f4ef;
+  --surface: #ffffff;
+  --secondary-bg: #edeae3;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --border-color: #ddd8ce;
+  color-scheme: light;
+}
+
+/* ── Dark mode — Premium warm-dark palette ── */
+.dark {
+  --bg: #0d0b09; /* deep warm-black page */
+  --surface: #1a1713; /* card / panel layer */
+  --secondary-bg: #221f19; /* table rows, secondary containers */
+  --text-primary: #f0ece2; /* warm off-white */
+  --text-secondary: #8c8070; /* warm muted */
+  --border-color: #302b24; /* clearly visible warm border */
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-primary transition-colors duration-300 font-sans;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* ── Dark-mode form elements
+     Uses compound specificity (0-1-2) to win over Tailwind utility (0-1-0)
+     so bg-bg / bg-surface on inputs are properly overridden in dark mode. ── */
+html.dark
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(
+    [type="color"]
+  ):not([type="file"]),
+html.dark textarea,
+html.dark select {
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* date/time inputs: let the browser render native chrome in dark mode */
+html.dark input[type="date"],
+html.dark input[type="time"] {
+  color-scheme: dark;
+}
+
+/* ── Premium scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ── Selection color ── */
+::selection {
+  background-color: rgba(212, 175, 55, 0.25);
+  color: var(--text-primary);
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

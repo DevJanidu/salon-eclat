@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "janidudev@gmail.com" && request.auth.token.email_verified == true);
+    }
+
+    function isValidBooking(data) {
+      return data.keys().hasAll(['branch', 'service', 'date', 'time', 'name', 'phone', 'email', 'status', 'createdAt']) &&
+             data.name is string && data.name.size() >= 2 &&
+             data.phone is string && data.phone.size() >= 10 &&
+             data.email is string &&
+             data.status in ['Pending', 'Confirmed', 'Completed', 'Cancelled'];
+    }
+
+    match /bookings/{bookingId} {
+      allow read: if isAdmin();
+      allow create: if isValidBooking(request.resource.data) && request.resource.data.status == 'Pending';
+      allow update: if isAdmin() && isValidBooking(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId || isAdmin();
+    }
+  }
+}
