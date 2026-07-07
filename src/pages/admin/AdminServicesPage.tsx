@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -92,8 +92,8 @@ export default function AdminServicesPage() {
       const payload = {
         name: form.name,
         category: form.category,
-        price: parseFloat(form.price.replace(/,/g, "")),
-        duration: parseInt(form.duration),
+        price: form.price,
+        duration: form.duration,
         description: form.description,
         imageUrl: form.imageUrl || undefined,
         status: form.status,
@@ -267,7 +267,7 @@ export default function AdminServicesPage() {
                       <Clock className="w-3 h-3" /> {service.duration} mins
                     </div>
                     <span className="text-lg font-bold text-text-primary">
-                      {Number(service.price).toLocaleString()} LKR
+                      ${Number(service.price).toLocaleString()}
                     </span>
                   </div>
                 </motion.div>
@@ -359,7 +359,7 @@ export default function AdminServicesPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-xs font-bold text-text-primary uppercase tracking-widest mb-2 block">
-                      Price (LKR) *
+                      Price ($) *
                     </label>
                     <input
                       type="number"

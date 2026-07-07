@@ -123,7 +123,7 @@ function ServiceSelector({
               {totalDuration} mins
             </span>
             <span className="font-bold text-salon-gold">
-              {totalPrice.toLocaleString()} LKR
+              ${totalPrice.toLocaleString()}
             </span>
           </div>
         </motion.div>
@@ -252,7 +252,7 @@ function ServiceSelector({
                           {service.duration} min
                         </span>
                         <span className="text-xs font-bold text-salon-gold">
-                          {Number(service.price).toLocaleString()} LKR
+                          ${Number(service.price).toLocaleString()}
                         </span>
                       </div>
                     </div>
@@ -946,11 +946,10 @@ export default function BookAppointmentPage() {
                   <div className="border-t border-border-color pt-3 flex justify-between font-bold">
                     <span className="text-text-secondary">Total Est.</span>
                     <span className="text-salon-gold">
-                      {services
+                      ${services
                         .filter((s) => selectedServices.includes(s.name))
                         .reduce((sum, s) => sum + Number(s.price), 0)
-                        .toLocaleString()}{" "}
-                      LKR
+                        .toLocaleString()}
                     </span>
                   </div>
                 </div>

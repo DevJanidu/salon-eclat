@@ -51,8 +51,9 @@ export function PublicLayout() {
           <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-salon-gold rounded-full flex items-center justify-center text-white font-serif text-xl font-bold shadow-inner">
               <img
-                src="https://res.cloudinary.com/dg3rk2yot/image/upload/v1772730569/logo_eyv3fr.png"
-                alt="logo"
+                src="/logo.png"
+                alt="Éclat Salon Logo"
+                className="w-full h-full rounded-full object-cover"
               />
             </div>
             <div className="flex flex-col">

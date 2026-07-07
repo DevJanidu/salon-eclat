@@ -1,6 +1,5 @@
-import apiClient from "@/lib/apiClient";
+import { delay } from "./mockData";
 import type {
-  ApiResponse,
   ChangePasswordRequest,
   LoginRequest,
   LoginResponse,
@@ -8,14 +7,16 @@ import type {
 
 export const authApi = {
   login: async (data: LoginRequest): Promise<LoginResponse> => {
-    const res = await apiClient.post<ApiResponse<LoginResponse>>(
-      "/auth/login",
-      data,
-    );
-    return res.data.data;
+    await delay(500);
+    return {
+      token: "mock-jwt-token-12345",
+      tokenType: "Bearer",
+      email: data.email,
+      role: data.email.includes("admin") ? "ADMIN" : "STAFF",
+    };
   },
 
   changePassword: async (data: ChangePasswordRequest): Promise<void> => {
-    await apiClient.post<ApiResponse<void>>("/auth/change-password", data);
+    await delay(500);
   },
 };

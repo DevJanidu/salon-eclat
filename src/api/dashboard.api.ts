@@ -1,10 +1,9 @@
-import apiClient from "@/lib/apiClient";
-import type { ApiResponse, DashboardStats } from "./types";
+import { delay, MOCK_DASHBOARD_STATS } from "./mockData";
+import type { DashboardStats } from "./types";
 
 export const dashboardApi = {
   getStats: async (): Promise<DashboardStats> => {
-    const res =
-      await apiClient.get<ApiResponse<DashboardStats>>("/dashboard/stats");
-    return res.data.data;
+    await delay(500);
+    return { ...MOCK_DASHBOARD_STATS };
   },
 };

@@ -1,22 +1,22 @@
 export const SALON_DATA = {
-  name: "Éclat Hair & Beauty Salon",
+  name: "Éclat Hair & Beauty Salon New York",
   tagline: "Glow with Éclat! Unveil Your Inner Glow.",
   aboutShort: "Éclat Beauty Salon offers premium hair, skin, and makeup services designed to enhance your natural beauty. With expert care, luxury products, and a warm atmosphere, we help you shine with confidence.",
   contact: {
-    whatsapp: "94773049957",
-    phone: "+94 777393482",
-    email: "saloneclatmatale@gmail.com",
-    address: "Matale, Sri Lanka",
+    whatsapp: "12125550199",
+    phone: "+1 (212) 555-0199",
+    email: "hello@eclatsalonnyc.com",
+    address: "Manhattan, New York, NY 10001",
     hours: "8.00am – 10.30pm",
   },
   location: {
-    lat: 7.4486944,
-    lng: 80.615,
-    googleMapsLink: "https://www.google.com/maps/place/7%C2%B026'55.3%22N+80%C2%B036'54.0%22E/@7.4486944,80.615,17z/data=!3m1!4b1!4m4!3m3!8m2!3d7.4486944!4d80.615?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3956.149615096844!2d80.615!3d7.448694400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjYnNTUuMyJOIDgwwrAzNic1NC4wIkU!5e0!3m2!1sen!2slk!4v1772698240675!5m2!1sen!2slk"
+    lat: 40.7580,
+    lng: -73.9855,
+    googleMapsLink: "https://www.google.com/maps/place/Times+Square/@40.7580,-73.9855,15z",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280010994!2d-74.14482937965902!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
   },
   social: {
-    tiktok: "https://www.tiktok.com/@eclat.hair.beauty?_t=ZS-8yot1ffC9s9&_r=1",
+    tiktok: "#",
     instagram: "#",
     facebook: "#",
   },
@@ -54,3 +54,4 @@ Preferred Time:
 Notes: `);
   return `mailto:${SALON_DATA.contact.email}?subject=${subject}&body=${body}`;
 };
+

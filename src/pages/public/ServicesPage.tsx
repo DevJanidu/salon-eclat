@@ -225,7 +225,7 @@ export default function ServicesPage() {
                               <span>{service.duration} mins</span>
                             </div>
                             <span className="font-bold text-salon-gold text-lg">
-                              {Number(service.price).toLocaleString()} LKR
+                              ${Number(service.price).toLocaleString()}
                             </span>
                           </div>
                           <Link to="/book">
